@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İş Arama - Kariyer Fırsatları</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="search-header">
+                <div class="search-input-group">
+                    <div class="search-input">
+                        <input type="text" placeholder="İş başlığı, yetenek veya şirket adı" id="jobSearch">
+                    </div>
+                    <div class="search-input">
+                        <input type="text" placeholder="Şehir veya 5 haneli posta kodu" id="locationSearch">
+                    </div>
+                    <button class="btn btn-primary btn-search">
+                        İş Bul
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-layout">
+                <!-- Filters Sidebar -->
+                <div class="filters-sidebar">
+                    <div class="filter-group">
+                        <div class="filter-header">
+                            <h3>Yayın Tarihi</h3>
+                            <i class="fas fa-chevron-up filter-arrow"></i>
+                        </div>
+                        <div class="filter-content">
+                            <div class="filter-item">
+                                <label class="filter-label">
+                                    <span>Yeni</span>
+                                    <span class="count" id="new-jobs-count">9</span>
+                                </label>
+                            </div>
+                                                    <div class="filter-item">
+                            <label class="filter-label">
+                                <span>Tüm ilanlar</span>
+                                <span class="count" id="all-jobs-count">13</span>
+                            </label>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <div class="filter-header collapsed">
+                            <h3>Gerekli Belgeler</h3>
+                            <i class="fas fa-chevron-up filter-arrow"></i>
+                        </div>
+                        <div class="filter-content collapsed">
+                            <div class="filter-item">
+                                <label class="filter-label" id="craft-filter">
+                                    <span>Kalfalık veya ustalık belgesi</span>
+                                    <span class="count">8</span>
+                                </label>
+                            </div>
+                            <div class="filter-item">
+                                <label class="filter-label" id="professional-filter">
+                                    <span>Mesleki yeterlilik belgesi</span>
+                                    <span class="count">3</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <div class="filter-header collapsed">
+                            <h3>Şehirler</h3>
+                            <i class="fas fa-chevron-up filter-arrow"></i>
+                        </div>
+                        <div class="filter-content collapsed">
+                            <div class="filter-item">
+                                <label class="filter-label">
+                                    <span>Berlin</span>
+                                    <span class="count">3</span>
+                                </label>
+                            </div>
+                            <div class="filter-item">
+                                <label class="filter-label">
+                                    <span>Willich-Schiefbahn</span>
+                                    <span class="count">4</span>
+                                </label>
+                            </div>
+                            <div class="filter-item">
+                                <label class="filter-label">
+                                    <span>Viersen</span>
+                                    <span class="count">4</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- Jobs List -->
+                <div class="jobs-content">
+                    <div class="jobs-header">
+                        <div class="results-summary">
+                            Aramanız <span id="jobsCount">13</span> sonuç buldu
+                        </div>
+                    </div>
+
+                    <div class="jobs-list" id="jobsList">
+                        <!-- Job cards will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
